@@ -6,3 +6,15 @@
 
 # Solo recolección sin reportes
 ./orchestrator/run_audit.sh --profile audit-role --region us-east-1 --skip-report
+
+
+
+# Comparar dos auditorías
+python3 audit_diff.py outputs/run-anterior/json/report_*.json outputs/run-actual/json/report_*.json
+
+python3 audit_diff.py outputs/test-run-20260508-final/json/report_20260508_212514.json outputs/test-run-20260508-final2/json/report_20260508_213514.json
+
+# Con output específico
+python3 audit_diff.py old_report.json new_report.json --output outputs/comparison.md
+
+ ./orchestrator/run_audit.sh   --profile audit-role   --region us-east-1   --auditor "George Terry"   --formats "html,markdown,docx,pptx,csv"   --output-dir outputs/test-run-$(date +%Y%m%d)-final2
