@@ -1,0 +1,18 @@
+{
+  "name": "aws_audit_suite",
+  "version": "1.0.0",
+  "description": "Suite modular de auditoría de seguridad para cuentas AWS basada en: - **CIS AWS Foundations Benchmark v1.4** - **AWS Well-Architected Framework — Security Pillar**",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

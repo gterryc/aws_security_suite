@@ -1,0 +1,16 @@
+# 1. Instalar Terraform en WSL
+sudo apt install terraform
+
+# 2. Desplegar recursos de prueba
+cd ~/aws_audit_suite/terraform
+terraform init && terraform apply
+
+# 3. Ejecutar auditoría
+cd ~/aws_audit_suite
+./orchestrator/run_audit.sh --profile audit-role --region us-east-1
+
+# 4. Verificar que los findings esperados aparecen
+cat outputs/json/report_*.json | python3 -m json.tool | grep "control_id"
+
+# 5. Destruir todo al terminar
+cd terraform && terraform destroy

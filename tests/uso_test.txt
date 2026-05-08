@@ -1,0 +1,12 @@
+cd ~/aws_audit_suite
+source .venv/bin/activate
+pip install pytest
+
+# Todos los tests
+python3 -m pytest tests/ -v
+
+# Un servicio específico
+python3 -m pytest tests/test_iam_analyzer.py -v
+
+# Solo los FAIL esperados
+python3 -m pytest tests/ -v -k "test_fail"

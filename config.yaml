@@ -1,0 +1,28 @@
+aws:
+  region: us-east-1
+  profile: audit-role
+
+audit:
+  frameworks:
+    - CIS_AWS_1.4
+    - AWS_WAF_SECURITY
+  services:
+    - s3
+    - iam
+    - ec2
+    - rds
+    - guardduty
+    - cloudwatch
+
+output:
+  formats:
+    - pdf
+    - html
+    - markdown
+  directory: outputs/reports
+  json_directory: outputs/json
+  dashboard_directory: outputs/dashboard
+
+logging:
+  level: INFO
+  file: outputs/audit.log

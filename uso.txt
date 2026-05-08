@@ -1,0 +1,8 @@
+# Auditoría completa
+./orchestrator/run_audit.sh --profile audit-role --region us-east-1
+
+# Solo servicios específicos
+./orchestrator/run_audit.sh --profile audit-role --region us-east-1 --services iam,s3,ec2
+
+# Solo recolección sin reportes
+./orchestrator/run_audit.sh --profile audit-role --region us-east-1 --skip-report

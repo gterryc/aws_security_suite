@@ -1,0 +1,97 @@
+# Outputs y reportes generados
+outputs/
+
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Credenciales y configuración sensible de AWS
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+.aws/
+aws-credentials.json
+credentials.json
+
+# Archivos de configuración con datos sensibles
+config.local.yaml
+config.*.yaml
+!config.yaml
+!config.example.yaml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+*.cover
+.hypothesis/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+.terraform/
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Logs
+*.log
+logs/
+log/
+
+# Documentos temporales
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Jupyter Notebooks (si los usas)
+.ipynb_checkpoints/
+*.ipynb
+
+# Archivos de base de datos local
+*.db
+*.sqlite
+*.sqlite3
