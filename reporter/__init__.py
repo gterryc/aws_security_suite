@@ -1,11 +1,12 @@
 """
-[REP-01/02/03] Reporter module — genera entregables en PDF, HTML, Markdown, DOCX y PPTX (EN + ES).
+[REP-01/02/03/04] Reporter module — genera entregables en PDF, HTML, Markdown, DOCX, PPTX y CSV/XLSX (EN + ES).
 """
 from reporter.md_reporter   import MarkdownReporter
 from reporter.html_reporter import HtmlReporter
 from reporter.pdf_reporter  import PdfReporter
 from reporter.docx_reporter import DocxReporter
 from reporter.pptx_reporter import PptxReporter
+from reporter.csv_reporter  import CsvReporter
 from schemas.report import Report
 from utils.logger import get_logger
 
@@ -17,6 +18,7 @@ REPORTERS = {
     "pdf":      PdfReporter,
     "docx":     DocxReporter,
     "pptx":     PptxReporter,
+    "csv":      CsvReporter,
 }
 
 # Formatos que se generan en ambos idiomas (EN + ES)
